@@ -1,0 +1,16 @@
+/* Session 4 Assignment 2:
+
+ * 	What will happen if you instantiate a child object of parent type (Parent p = new Child()), and invoke a
+ 	parent public method from the child object, and then invoke a parent private method called from the same parent method?
+
+ * 	Answer:
+ 		C. Prints : Parent's method2() 
+            		Parent's method1()
+            	
+ * 	Explanation:
+		"Parent's method2()" prints because you can instantiate a new Child object of type Parent.
+		This child object is limited to parent methods but child methods can be accessed through casting: ((Child)p).method1().
+
+		Private methods can be accessed by sibling methods, so "Parent's method1()" prints next.
+		Private methods cannot be accessed from the child.
+*/
